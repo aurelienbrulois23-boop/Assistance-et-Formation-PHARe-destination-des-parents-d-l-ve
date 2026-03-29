@@ -172,6 +172,15 @@
     return (player || '').trim();
   }
 
+  function slugifyFilePart(text){
+    return normalizePlayer(text)
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'parent';
+  }
+
   function certKey(id){
     return CERT_PREFIX + id;
   }
@@ -285,6 +294,135 @@
 
   function clearSyncedSet(player){
     localStorage.removeItem(syncedModulesKey(player));
+  }
+
+  function knownModuleIds(){
+    return new Set(MODULES.map(function(module){ return module.id; }));
+  }
+
+  function sanitizeModuleIds(values){
+    var known = knownModuleIds();
+    var seen = new Set();
+    return (Array.isArray(values) ? values : []).filter(function(id){
+      return typeof id === 'string' && known.has(id) && !seen.has(id) && seen.add(id);
+    });
+  }
+
+  function snapshotForPlayer(player){
+    var normalized = normalizePlayer(player);
+    if(!normalized){ return null; }
+    syncCurrentPlayerState();
+    var snapshot = parseJson(localStorage.getItem(playerStateKey(normalized)), null) || {
+      v:1,
+      player:normalized,
+      completedModules:readCompletedModules(normalized),
+      updatedAt:new Date().toISOString()
+    };
+    snapshot.player = normalized;
+    snapshot.completedModules = sanitizeModuleIds(snapshot.completedModules);
+    return snapshot;
+  }
+
+  function setSaveStatus(message, tone){
+    var status = document.getElementById('save-status');
+    if(!status){ return; }
+    status.textContent = message;
+    status.classList.remove('ok', 'warn', 'bad');
+    if(tone){ status.classList.add(tone); }
+  }
+
+  function buildExportPayload(player){
+    var snapshot = snapshotForPlayer(player);
+    if(!snapshot){ return null; }
+    return {
+      type:'PIX_PARENTS_SAVE',
+      hub:HUB_ID,
+      version:2,
+      player:snapshot.player,
+      completedModules:snapshot.completedModules,
+      syncedModules:sanitizeModuleIds(Array.from(readSyncedSet(snapshot.player))),
+      updatedAt:snapshot.updatedAt || new Date().toISOString(),
+      exportedAt:new Date().toISOString()
+    };
+  }
+
+  function downloadCurrentSave(){
+    var player = currentPlayer();
+    if(!player){
+      setSaveStatus('Ouvrez d’abord une session parent avant de télécharger une sauvegarde.', 'warn');
+      return;
+    }
+    var payload = buildExportPayload(player);
+    if(!payload){
+      setSaveStatus('Impossible de préparer la sauvegarde pour cette session.', 'bad');
+      return;
+    }
+    var filename = 'pix-parents-' + slugifyFilePart(player) + '-' + new Date().toISOString().slice(0, 10) + '.json';
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type:'application/json;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 500);
+    setSaveStatus('Sauvegarde téléchargée pour ' + player + '. Conservez bien le fichier sur votre PC ou une clé USB.', 'ok');
+  }
+
+  function importSavePayload(payload){
+    if(!payload || typeof payload !== 'object'){
+      throw new Error('Fichier de sauvegarde illisible.');
+    }
+    if(payload.hub !== HUB_ID && payload.type !== 'PIX_PARENTS_SAVE'){
+      throw new Error('Ce fichier ne semble pas provenir de PIX Parents.');
+    }
+    var player = normalizePlayer(payload.player);
+    if(!player){
+      throw new Error('Le fichier ne contient pas d’identifiant parent utilisable.');
+    }
+    var completed = sanitizeModuleIds(payload.completedModules);
+    var syncedSource = Array.isArray(payload.syncedModules) ? payload.syncedModules : completed;
+    var synced = sanitizeModuleIds(syncedSource).filter(function(id){ return completed.indexOf(id) !== -1; });
+    var current = currentPlayer();
+    if(current && current.toLowerCase() !== player.toLowerCase()){
+      var ok = window.confirm('Charger la sauvegarde de ' + player + ' et remplacer la session actuellement ouverte sur ce navigateur ?');
+      if(!ok){ return false; }
+    }
+    localStorage.setItem(playerStateKey(player), JSON.stringify({
+      v:1,
+      player:player,
+      completedModules:completed,
+      updatedAt:payload.updatedAt || new Date().toISOString()
+    }));
+    writeSyncedSet(player, new Set(synced));
+    setStoredPlayer(player);
+    addRecentPlayer(player);
+    restorePlayerState(player);
+    render();
+    setSaveStatus('Sauvegarde chargée pour ' + player + '. La progression locale est restaurée sur ce navigateur.', 'ok');
+    return true;
+  }
+
+  function handleSaveFileSelection(evt){
+    var file = evt.target.files && evt.target.files[0];
+    if(!file){ return; }
+    var reader = new FileReader();
+    reader.onload = function(loadEvt){
+      try{
+        var payload = JSON.parse(String(loadEvt.target.result || ''));
+        importSavePayload(payload);
+      }catch(err){
+        setSaveStatus(err && err.message ? err.message : 'Impossible de charger ce fichier de sauvegarde.', 'bad');
+      }finally{
+        evt.target.value = '';
+      }
+    };
+    reader.onerror = function(){
+      evt.target.value = '';
+      setSaveStatus('Lecture du fichier impossible. Réessayez avec une sauvegarde JSON de PIX Parents.', 'bad');
+    };
+    reader.readAsText(file, 'utf-8');
   }
 
   function completedSet(player){
@@ -436,6 +574,7 @@
     document.getElementById('resume-btn').textContent = !player ? 'Ouvrir une session pour commencer' : (next ? ('Ouvrir le prochain module : ' + next.id) : 'Parcours complet');
     document.getElementById('reset-btn').disabled = !player;
     document.getElementById('logout-btn').disabled = !player;
+    document.getElementById('download-save-btn').disabled = !player;
 
     var recent = recentPlayers();
     document.getElementById('recent-wrap').classList.toggle('hidden', recent.length === 0);
@@ -532,6 +671,11 @@
     });
     document.getElementById('reset-btn').addEventListener('click', resetCurrentProgress);
     document.getElementById('logout-btn').addEventListener('click', logoutCurrentPlayer);
+    document.getElementById('download-save-btn').addEventListener('click', downloadCurrentSave);
+    document.getElementById('upload-save-btn').addEventListener('click', function(){
+      document.getElementById('save-file-input').click();
+    });
+    document.getElementById('save-file-input').addEventListener('change', handleSaveFileSelection);
 
     document.addEventListener('click', function(evt){
       var openId = evt.target.getAttribute('data-open');

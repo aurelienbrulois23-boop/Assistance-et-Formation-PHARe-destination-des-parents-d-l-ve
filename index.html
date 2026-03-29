@@ -46,6 +46,22 @@
             <button id="logout-btn" class="ghost-btn" type="button">Fermer la session</button>
           </div>
         </form>
+        <div class="save-box">
+          <div class="tiny-label">Sauvegarde portable</div>
+          <p class="save-copy">Sans compte parent centralisé, chaque famille peut télécharger un fichier de sauvegarde puis le recharger plus tard sur ce PC ou sur un autre.</p>
+          <div class="button-row">
+            <button id="download-save-btn" class="secondary-btn" type="button">Télécharger ma sauvegarde</button>
+            <button id="upload-save-btn" class="ghost-btn" type="button">Charger une sauvegarde</button>
+          </div>
+          <input id="save-file-input" class="hidden" type="file" accept=".json,application/json">
+          <div class="save-steps">
+            <strong>Mode d’emploi</strong>
+            <span>1. Ouvrez votre session parent.</span>
+            <span>2. Téléchargez le fichier de sauvegarde et gardez-le sur votre PC ou une clé USB.</span>
+            <span>3. Sur un autre poste, ouvrez PIX Parents puis cliquez sur « Charger une sauvegarde ».</span>
+          </div>
+          <p id="save-status" class="save-status">Le fichier reste géré par la famille. Aucun mot de passe n’est nécessaire pour ce mode.</p>
+        </div>
         <div id="recent-wrap" class="hidden" style="margin-top:16px">
           <div class="tiny-label">Sessions récentes</div>
           <div id="recent-list" class="recent-list"></div>
