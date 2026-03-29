@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | Parcours parents contre le harcèlement</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <div class="hub-shell">
+    <section class="hero fade-up">
+      <div>
+        <div class="eyebrow">Hub parents autonome · progression automatique</div>
+        <h1>Former les parents à agir juste face au harcèlement.</h1>
+        <p class="hero-lead">PIX Parents reprend la logique mature de PIX AED, mais pour les familles. On y travaille des réflexes adultes et progressifs : observer sans s’emballer, ouvrir la parole, traiter le numérique proprement, coopérer avec l’établissement, activer les bons relais et remettre l’avenir en mouvement.</p>
+        <p id="hero-greeting" class="hero-lead" style="margin-bottom:0"></p>
+        <div id="hero-status" class="hero-status"></div>
+        <div class="hero-points">
+          <div class="point-card">
+            <strong>Une progression claire</strong>
+            <span>Chaque module nourrit le suivant. Rien à copier, rien à valider par code : l’index détecte et débloque automatiquement.</span>
+          </div>
+          <div class="point-card">
+            <strong>Des situations adultes</strong>
+            <span>Les scénarios partent de la vraie vie des familles : groupes de classe, captures, rendez-vous avec le CPE, retour à la maison, honte, fatigue et perte de projection.</span>
+          </div>
+          <div class="point-card">
+            <strong>Des relais et un horizon</strong>
+            <span>Le parcours va jusqu’aux partenaires utiles et à la remobilisation par l’orientation, tout en continuant de remonter automatiquement dans <code>pvs_bridge_events</code>.</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="session-card">
+        <div class="tiny-label">Session parent</div>
+        <h2>Entrer dans le parcours</h2>
+        <p class="session-text">Renseignez un nom, un code famille ou une étiquette simple. La progression locale reste associée à cette session et peut être reprise sur ce navigateur.</p>
+        <form id="session-form" class="session-form">
+          <input id="player-input" class="session-input" type="text" placeholder="Exemple : Famille Martin ou Parent 5e B" autocomplete="off">
+          <div class="button-row">
+            <button class="primary-btn" type="submit">Ouvrir la session</button>
+            <button id="resume-btn" class="secondary-btn" type="button">Reprendre le parcours</button>
+          </div>
+          <div class="button-row">
+            <button id="reset-btn" class="ghost-btn" type="button">Réinitialiser la progression locale</button>
+            <button id="logout-btn" class="ghost-btn" type="button">Fermer la session</button>
+          </div>
+        </form>
+        <div id="recent-wrap" class="hidden" style="margin-top:16px">
+          <div class="tiny-label">Sessions récentes</div>
+          <div id="recent-list" class="recent-list"></div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <section class="surface-card fade-up">
+          <div class="tiny-label">Tableau de bord</div>
+          <div id="progress-ring" class="progress-ring"></div>
+          <h3 id="sidebar-title">Session non ouverte</h3>
+          <div id="metric-grid" class="metric-grid"></div>
+        </section>
+
+        <section class="surface-card fade-up">
+          <div class="tiny-label">Signaux à surveiller</div>
+          <h3>Quand un parent doit ralentir et regarder de plus près</h3>
+          <div id="signal-list" class="signal-list"></div>
+        </section>
+
+        <section class="surface-card fade-up">
+          <div class="tiny-label">Repères utiles</div>
+          <h3>Quatre portes d’entrée</h3>
+          <div id="quick-list" class="quick-list"></div>
+        </section>
+      </aside>
+
+      <main class="main-column">
+        <section class="main-section fade-up">
+          <div class="section-head">
+            <div>
+              <div class="tiny-label">Parcours complet</div>
+              <h2>Les dix modules du parcours</h2>
+            </div>
+            <p>Le chemin est volontairement progressif. Un premier cycle pose les bases de protection. Un second cycle approfondit la lecture du cerveau adolescent, les relais autour de la famille, le numérique côté adultes et la reprise de l’orientation.</p>
+          </div>
+          <div id="pillar-grid" class="pillar-grid"></div>
+        </section>
+
+        <section class="main-section fade-up">
+          <div class="section-head">
+            <div>
+              <div class="tiny-label">Parcours conseillé</div>
+              <h2>Une logique de protection adulte en deux temps</h2>
+            </div>
+            <p>Le fil directeur reste simple : écouter, documenter, transmettre, protéger, suivre. Puis vient le second temps, souvent oublié : comprendre ce que vit l’adolescent, choisir les bons partenaires et rouvrir un avenir praticable.</p>
+          </div>
+          <div id="path-grid" class="path-grid"></div>
+        </section>
+
+        <section class="main-section fade-up">
+          <div class="section-head">
+            <div>
+              <div class="tiny-label">Ressources essentielles</div>
+              <h2>Ce que l’index met déjà à disposition</h2>
+            </div>
+            <p>Ces repères sont directement pensés pour des adultes. Ils complètent les modules sans les remplacer et donnent une base d’action immédiate, y compris pour reparler orientation et relais territoriaux.</p>
+          </div>
+          <div class="resource-grid">
+            <article class="resource-card">
+              <span class="resource-kicker">Avant toute accusation</span>
+              <strong>Construire une chronologie propre</strong>
+              <p>Notez ce qui change, quand cela change, sur quels supports, avec quels mots et quels effets sur votre enfant. Une chronologie factuelle aide davantage que dix impressions dispersées.</p>
+              <ul>
+                <li>Symptômes répétés : sommeil, ventre, évitement scolaire, anxiété du téléphone</li>
+                <li>Éléments numériques : captures, URL, pseudo, date, horaire, plateforme</li>
+                <li>Impacts concrets : absences, chute de confiance, isolement, repli, colère</li>
+              </ul>
+            </article>
+
+            <article class="resource-card">
+              <span class="resource-kicker">Relation avec l’établissement</span>
+              <strong>Venir avec une demande claire</strong>
+              <p>Le premier rendez-vous gagne en efficacité si vous demandez un interlocuteur, des mesures de protection visibles et un point de suivi à date fixe.</p>
+              <ul>
+                <li>Qui coordonne dans l’établissement ?</li>
+                <li>Quelles mesures immédiates de protection sont prises ?</li>
+                <li>Quand refait-on un point et avec qui ?</li>
+              </ul>
+            </article>
+
+            <article class="resource-card">
+              <span class="resource-kicker">Après l’urgence</span>
+              <strong>La réparation ne se limite pas à la sanction</strong>
+              <p>Un enfant peut être officiellement protégé et rester pourtant épuisé, honteux ou hypervigilant. La reconstruction passe aussi par les routines, le corps, les liens sécurisants et des adultes prévisibles.</p>
+              <ul>
+                <li>Retrouver un rythme de sommeil et des points d’appui quotidiens</li>
+                <li>Sortir du statut d’enfant problème ou d’enfant victime</li>
+                <li>Ouvrir des relais si la souffrance persiste ou s’aggrave</li>
+              </ul>
+            </article>
+
+            <article class="resource-card">
+              <span class="resource-kicker">Remobilisation</span>
+              <strong>Rouvrir l’orientation par petites prises</strong>
+              <p>Le dossier contient déjà des repères sur les lycées, MFR, CFA, mini-stages, internat, mobilité et secteurs professionnels. Après une période de harcèlement, ces ressources servent à reparler d’avenir sans brusquer.</p>
+              <ul>
+                <li>Partir d’un lieu supportable avant de parler de prestige</li>
+                <li>Comparer rythme, trajet, internat, alternance et besoins d’appui</li>
+                <li>Utiliser le PsyEN et les ressources locales pour redonner du possible</li>
+              </ul>
+            </article>
+          </div>
+          <p class="footer-note">Repères institutionnels et territoriaux mobilisés pour le contenu : parler à un adulte de l’établissement, conserver les éléments utiles, activer le 3018 si nécessaire, s’appuyer sur les relais autour de l’adolescent et rouvrir la question de l’orientation quand le moment redevient respirable.</p>
+        </section>
+
+        <section class="main-section fade-up">
+          <div class="section-head">
+            <div>
+              <div class="tiny-label">Vigilances majeures</div>
+              <h2>Trois erreurs qui aggravent souvent les situations</h2>
+            </div>
+            <p>Le but de la plateforme n’est pas de rendre les parents hypervigilants, mais de les aider à sortir des réponses qui partent d’une bonne intention et deviennent contre-productives.</p>
+          </div>
+          <div class="alert-grid">
+            <article class="alert-card">
+              <strong>Accuser en public ou en groupe de parents</strong>
+              <p>La colère est compréhensible, mais elle disperse les preuves, rigidifie les positions et peut exposer davantage votre enfant.</p>
+            </article>
+            <article class="alert-card">
+              <strong>Faire défiler les messages sous pression</strong>
+              <p>Un parent protecteur n’a pas besoin de tout voir d’un coup. On peut convenir d’un temps calme, sauvegarder ce qui compte et garder à l’enfant une part de contrôle.</p>
+            </article>
+            <article class="alert-card">
+              <strong>Confondre silence et disparition du problème</strong>
+              <p>Quand un enfant dit "laisse tomber", cela peut signifier "j’ai honte", "je te protège" ou "je suis fatigué". Le retrait de la parole n’est pas une preuve d’apaisement.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="hub.js"></script>
+</body>
+</html>

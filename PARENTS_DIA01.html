@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_DIA01</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_DIA01",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Dialogue",
+      kicker:"Parler et réguler · Module 2/10",
+      title:"Parler sans fermer la parole",
+      quote:"Quand un parent panique à haute voix, l'enfant apprend vite qu'il doit choisir entre dire la vérité et protéger son parent.",
+      intro:[
+        "Une grande part du travail parental consiste à rendre la parole possible. Or la situation de harcèlement fabrique souvent l'inverse : la honte, la peur d'aggraver, l'impression qu'il faudra tout raconter d'un seul coup, et parfois la crainte que les adultes répondent trop fort ou trop vite.",
+        "Parler n'est donc pas arracher des confidences. C'est installer un cadre où l'enfant sent qu'il peut nommer des éléments, revenir plus tard, corriger ce qu'il vient de dire et participer aux décisions qui le concernent.",
+        "Dans ce module, vous allez travailler une posture rare mais très puissante : être assez présent pour ne pas laisser l'enfant seul, et assez régulé pour ne pas l'enfermer dans un interrogatoire."
+      ],
+      insight:"Une bonne conversation parentale ne cherche pas d'abord des aveux complets. Elle cherche un lien assez solide pour que la vérité puisse revenir.",
+      xp:90,
+      earns:["Écoute", "Cadre adulte", "Co-décision"],
+      seal:"◇",
+      completionText:"Vous avez travaillé une posture centrale : rester adulte et stable pour que la parole de l'enfant puisse exister sans se refermer.",
+      theme:{
+        accent:"#8ab4ff",
+        accentDark:"#4f7dd7",
+        gold:"#f0cc83",
+        bg:"#101523",
+        bg2:"#1a2236",
+        watermark:"rgba(138,180,255,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"En voiture, votre enfant vous dit enfin : Si je te raconte, tu vas faire n'importe quoi. Il regarde par la fenêtre et semble prêt à se refermer aussitôt.",
+          question:"Quelle réponse garde le lien ouvert ?",
+          options:[
+            {
+              label:"Nommer votre rôle et réguler la conversation",
+              text:"Je lui dis : Tu n'as pas besoin de tout me dire d'un coup. Mon rôle, c'est de te protéger, pas de partir dans tous les sens. On peut prendre les choses une par une.",
+              score:3,
+              good:true,
+              feedback:"C'est une excellente entrée. Vous signalez que vous restez adulte, que vous n'exigez pas un récit total et que vous pouvez contenir votre propre réaction. Cela diminue fortement la peur de parler."
+            },
+            {
+              label:"Exiger tout de suite les noms et les preuves",
+              text:"Je lui demande immédiatement qui, quand, combien de fois, sur quelle appli et j'insiste jusqu'à obtenir tous les détails.",
+              score:0,
+              good:false,
+              feedback:"L'intention est de comprendre, mais la forme ressemble à un interrogatoire. Beaucoup d'enfants se taisent justement parce qu'ils anticipent cette pression."
+            },
+            {
+              label:"Promettre une discrétion totale",
+              text:"Je lui dis que je ne dirai rien à personne, quoi qu'il me raconte, afin qu'il ose parler.",
+              score:1,
+              good:false,
+              feedback:"La confiance compte, mais promettre le secret absolu est piégeux. Un parent peut avoir besoin d'activer un autre adulte pour protéger. Il vaut mieux promettre d'agir avec l'enfant, pas de ne rien faire."
+            }
+          ]
+        },
+        {
+          context:"Votre adolescente montre une vidéo humiliante qui circule dans une conversation de classe. Elle ajoute : Je te la montre, mais ne fais pas une scène. Je veux juste que ça s'arrête.",
+          question:"Que privilégier dans l'échange ?",
+          options:[
+            {
+              label:"Comprendre ce qui l'aiderait vraiment maintenant",
+              text:"Je commence par la remercier de me l'avoir montrée. Puis je lui demande ce qu'elle craint le plus, ce qu'elle a déjà tenté, et ce qu'elle attend de moi dans l'immédiat.",
+              score:3,
+              good:true,
+              feedback:"Cette posture restaure un minimum de contrôle à l'enfant. Vous ne l'abandonnez pas, mais vous ne lui retirez pas non plus toute prise sur la situation. C'est souvent ce qui permet d'avancer ensemble."
+            },
+            {
+              label:"Prendre le téléphone et tout parcourir seul",
+              text:"Je prends son appareil, je fais défiler tout le fil en silence et je décide seul des suites.",
+              score:1,
+              good:false,
+              feedback:"Vous pouvez avoir besoin de voir des éléments, mais le faire sans cadre ni accord peut faire vivre à l'enfant une nouvelle perte de contrôle. Mieux vaut annoncer ce que vous regardez et pourquoi."
+            },
+            {
+              label:"Supprimer l'appli et couper net",
+              text:"Je lui retire l'application un mois et j'estime avoir traité la racine du problème.",
+              score:0,
+              good:false,
+              feedback:"Le retrait temporaire d'un outil peut parfois aider, mais en soi il ne traite pas le harcèlement. Il peut même accentuer l'isolement si l'enfant perd aussi ses quelques liens de soutien."
+            }
+          ]
+        },
+        {
+          context:"Le lendemain, votre enfant revient en arrière : Finalement oublie. C'est pas si grave. Vous percevez pourtant toujours de la tension, et il dort très mal depuis plusieurs jours.",
+          question:"Comment tenir ensemble respect de sa parole et devoir de protection ?",
+          options:[
+            {
+              label:"Redire que vous respectez son rythme sans renoncer à agir",
+              text:"Je lui dis que j'entends qu'il ne veut pas tout reprendre maintenant, mais que certains signaux m'obligent comme parent à chercher une solution protectrice avec lui et pas contre lui.",
+              score:3,
+              good:true,
+              feedback:"C'est exactement le point d'équilibre à viser. Vous ne forcez pas le récit, mais vous ne vous désistez pas de votre responsabilité adulte. Cette combinaison est souvent très sécurisante."
+            },
+            {
+              label:"Faire comme s'il n'avait rien dit",
+              text:"Puisqu'il retire sa parole, je classe l'épisode pour ne pas le brusquer davantage.",
+              score:0,
+              good:false,
+              feedback:"Respecter le rythme ne signifie pas effacer les indices déjà apparus. Si la souffrance continue, l'adulte reste responsable du cadre de protection."
+            },
+            {
+              label:"Passer aussitôt à la morale",
+              text:"Je lui explique longuement qu'il faut apprendre à avoir du caractère et ne pas se laisser atteindre.",
+              score:0,
+              good:false,
+              feedback:"La solidité ne se construit pas sous la leçon morale. Quand un enfant se sent humilié ou menacé, il a d'abord besoin de sécurité et d'alliance, pas d'un discours sur la force mentale."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"La parole a besoin d'un adulte régulé.",
+          text:"Votre calme ne nie pas la gravité. Il permet simplement à l'enfant de ne pas avoir à gérer votre débordement en plus de sa souffrance."
+        },
+        {
+          title:"Éviter le tout ou rien.",
+          text:"On peut avancer sans obtenir toute l'histoire d'un coup. Quelques faits bien recueillis valent mieux qu'une confession forcée."
+        },
+        {
+          title:"Pas de secret absolu, mais pas de passage en force.",
+          text:"Le parent protège en associant son enfant autant que possible aux décisions, tout en gardant son devoir d'agir si la sécurité est en jeu."
+        },
+        {
+          title:"Donner de la prise à l'enfant.",
+          text:"Demander ce qu'il craint, ce qu'il espère et ce qu'il veut voir se passer rend l'action parentale plus ajustée et souvent plus efficace."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

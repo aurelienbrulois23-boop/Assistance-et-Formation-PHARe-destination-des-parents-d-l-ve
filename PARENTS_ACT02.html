@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_ACT02</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_ACT02",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Relais",
+      kicker:"Coopérer et relayer · Module 9/10",
+      title:"Autour de l’enfant : quels relais activer, à quel moment ?",
+      quote:"Un parent n’a pas à tout porter seul. Il gagne surtout à savoir quel adulte sert à quoi.",
+      intro:[
+        "À ce stade du parcours, les parents ont déjà travaillé la protection de base. Reste une question très concrète : quand faut-il rester dans le cercle établissement-famille, et quand faut-il mobiliser d’autres relais ? Les documents du dossier sur les partenaires éducatifs et territoriaux donnent ici une base très utile.",
+        "Le collège ou le lycée coordonne la protection scolaire. Le PsyEN peut redevenir précieux lorsque le jeune décroche de toute projection ou que l’orientation se brouille. La Maison des Adolescents, les CMP ou d’autres relais de soin deviennent importants quand la souffrance persiste, déborde le cadre scolaire ou ne redescend plus vraiment. Et si l’on glisse vers un danger grave pour un mineur, il ne faut pas rester seul avec le doute.",
+        "Ce module n’encourage pas la dispersion. Il apprend au contraire à choisir le relais qui correspond au besoin du moment, pour éviter à la fois l’isolement parental et la multiplication d’intervenants mal articulés."
+      ],
+      insight:"Le bon relais n’est pas le plus impressionnant. C’est celui qui répond clairement au besoin du moment.",
+      xp:110,
+      earns:["Orientation des relais", "Coordination", "Clarté"],
+      seal:"◇",
+      completionText:"Vous avez clarifié un point majeur : mieux protéger, c’est aussi savoir orienter la situation vers le bon adulte, au bon moment.",
+      theme:{
+        accent:"#efad72",
+        accentDark:"#c9844c",
+        gold:"#f4cf8d",
+        bg:"#18120f",
+        bg2:"#2c1f19",
+        watermark:"rgba(239,173,114,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"L’établissement a commencé à traiter la situation et votre enfant est un peu mieux protégé sur le temps scolaire. Pourtant, il dort toujours très mal, reste vidé et n’arrive plus à récupérer à la maison.",
+          question:"Quel raisonnement adulte est le plus juste ?",
+          options:[
+            {
+              label:"Comprendre que la protection scolaire ne suffit pas toujours",
+              text:"Je continue le lien avec l’établissement, mais je reconnais que la souffrance déborde peut-être maintenant le cadre scolaire. Je cherche avec les professionnels appropriés un relais d’écoute ou de soin plutôt que d’attendre que tout revienne seul.",
+              score:3,
+              good:true,
+              feedback:"C’est la bonne lecture. Une situation peut être mieux cadrée à l’école tout en laissant un adolescent épuisé, honteux ou anxieux. Dans ce cas, un relais extérieur devient parfois nécessaire."
+            },
+            {
+              label:"Tout remettre sur l’école",
+              text:"Tant que mon enfant va mal, j’en conclus que l’établissement n’a rien fait de sérieux et j’exige qu’il règle aussi ce qui se passe désormais à la maison.",
+              score:1,
+              good:false,
+              feedback:"L’établissement a une responsabilité réelle sur la protection scolaire, mais il ne peut pas, à lui seul, absorber toute la souffrance psychique résiduelle. Le parent gagne à articuler les niveaux d’aide."
+            },
+            {
+              label:"Ne plus rien bouger pour ne pas dramatiser",
+              text:"Comme la situation scolaire est un peu moins visible, je préfère ne solliciter personne d’autre afin d’éviter d’enfermer mon enfant dans un problème.",
+              score:0,
+              good:false,
+              feedback:"La prudence est utile, mais retarder un relais pertinent peut prolonger une souffrance déjà installée. Chercher de l’aide n’enferme pas un jeune ; cela peut justement lui éviter de s’y enliser."
+            }
+          ]
+        },
+        {
+          context:"Votre enfant est en 3e. Depuis les événements, toute discussion sur l’après, les stages ou le lycée le met en échec. Il répète : « Je m’en fiche, de toute façon ça ne sert à rien. »",
+          question:"Quel relais devient particulièrement pertinent ?",
+          options:[
+            {
+              label:"Réintroduire un tiers d’orientation",
+              text:"Je me dis qu’un échange avec le PsyEN ou un adulte capable de reparler du parcours et des possibles, sans pression immédiate, peut aider à rouvrir un peu d’avenir là où tout s’est rétréci.",
+              score:3,
+              good:true,
+              feedback:"Très juste. Quand le harcèlement a cassé la projection, il faut parfois un tiers pour remettre de l’espace et de la méthode dans la question de l’après."
+            },
+            {
+              label:"Reporter toute orientation à plus tard",
+              text:"Je décide que l’orientation attendra complètement, même si cela signifie arriver sans aucune préparation au moment des choix.",
+              score:1,
+              good:false,
+              feedback:"Il ne faut pas forcer, mais tout suspendre peut aussi majorer l’angoisse. L’enjeu est de rouvrir de petites prises, pas de demander un choix final tout de suite."
+            },
+            {
+              label:"Imposer un projet pour le remettre en route",
+              text:"Je choisis moi-même une voie et des établissements pour lui redonner un cap, en pensant qu’il me remerciera plus tard.",
+              score:0,
+              good:false,
+              feedback:"Un cap imposé peut donner l’illusion d’avancer, mais il laisse souvent intacte la blessure de projection. La remobilisation a besoin d’un minimum d’adhésion et de respiration."
+            }
+          ]
+        },
+        {
+          context:"Au fil des semaines, vous percevez un risque de danger grave pour votre enfant : propos très inquiétants, peur intense, ou éléments laissant penser qu’il ne peut pas rester sans protection renforcée.",
+          question:"Quel principe doit alors guider le parent ?",
+          options:[
+            {
+              label:"Ne pas rester seul avec le doute",
+              text:"Je comprends qu’à ce niveau, je ne dois plus porter cela seul. Je sollicite immédiatement les secours ou les dispositifs de protection adaptés, et j’utilise le 119 si la situation relève d’un danger grave pour un mineur.",
+              score:3,
+              good:true,
+              feedback:"C’est le principe central. Quand on bascule vers le grave, la priorité n’est plus la discrétion parfaite ni la patience, mais la mise en sécurité et l’activation du bon cadre de protection."
+            },
+            {
+              label:"Attendre d’être totalement certain",
+              text:"Je préfère réunir encore plus d’éléments avant d’alerter, pour être sûr de ne pas exagérer la situation.",
+              score:0,
+              good:false,
+              feedback:"Face au danger grave, attendre la certitude totale est risqué. Le doute sérieux suffit à justifier qu’on ne reste plus seul et qu’on active un cadre adapté."
+            },
+            {
+              label:"Régler cela seulement en famille",
+              text:"Je décide de ne parler à aucun professionnel pour éviter que la situation ne devienne officielle ou trop lourde pour mon enfant.",
+              score:0,
+              good:false,
+              feedback:"Dans les situations graves, le huis clos familial peut devenir un piège. Chercher de l’aide n’est pas abandonner son rôle ; c’est l’assumer jusqu’au bout."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"L’école coordonne la protection scolaire.",
+          text:"Mais elle ne porte pas seule tout ce qui déborde ensuite sur le sommeil, l’humeur, la santé ou la projection du jeune."
+        },
+        {
+          title:"Le PsyEN aide à rouvrir l’avenir.",
+          text:"Quand le harcèlement abîme l’orientation, un tiers peut aider à remettre du possible sans écraser."
+        },
+        {
+          title:"Les relais de soin ont leur place.",
+          text:"Quand la souffrance persiste malgré une meilleure protection scolaire, il devient pertinent d’articuler école, famille et ressources d’écoute ou de soin."
+        },
+        {
+          title:"Le danger grave change la règle.",
+          text:"À ce niveau, on n’attend pas d’être parfaitement certain. On ne reste pas seul avec le doute."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

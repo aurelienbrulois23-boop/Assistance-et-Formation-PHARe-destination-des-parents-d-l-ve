@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_NUM02</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_NUM02",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Numérique",
+      kicker:"Protéger en ligne · Module 8/10",
+      title:"Numérique côté adultes : protéger sans surexposer",
+      quote:"Une preuve utile protège. Une capture qui circule partout peut fabriquer une deuxième violence.",
+      intro:[
+        "Quand un parent découvre des messages humiliants, son premier élan est souvent de montrer, d’alerter, de confronter et d’accélérer. Cet élan protecteur est compréhensible. Pourtant, la circulation désordonnée des captures, les échanges en groupe de parents ou les accusations publiques produisent souvent plus de bruit que de protection.",
+        "Les ressources locales sur le cyberharcèlement rappellent une distinction simple : il faut conserver les preuves, pas diffuser l’humiliation. Ce qui compte, ce sont les éléments utiles au traitement : date, heure, pseudo, plateforme, URL, captures ciblées et interlocuteur légitime. Le reste peut vite devenir une arène adulte qui expose encore davantage le jeune.",
+        "Ce module ne revient donc pas sur les bases du 3018 ou du signalement déjà vues. Il travaille la part proprement adulte de la situation : comment ne pas transformer sa colère numérique en caisse de résonance supplémentaire."
+      ],
+      insight:"Dans les situations numériques, le bon réflexe n’est pas « qui peut voir ça ? » mais « qui a vraiment besoin de le voir pour protéger ? »",
+      xp:105,
+      earns:["Discrétion utile", "Preuve", "Protection"],
+      seal:"◆",
+      completionText:"Vous avez consolidé un point décisif : savoir agir sur le numérique sans élargir encore la scène de l’humiliation.",
+      theme:{
+        accent:"#d79a4a",
+        accentDark:"#aa6b33",
+        gold:"#f4cf8d",
+        bg:"#17120d",
+        bg2:"#2a2016",
+        watermark:"rgba(215,154,74,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Une mère du groupe de parents écrit : « Envoie les captures ici, on va régler ça entre nous. » Vous avez effectivement des preuves gênantes sur le téléphone de votre enfant.",
+          question:"Quel choix protège le mieux ?",
+          options:[
+            {
+              label:"Garder les preuves dans un circuit court",
+              text:"Je refuse la diffusion au groupe. Je sauvegarde les captures utiles, avec date, heure et support, puis je les transmets seulement aux interlocuteurs qui ont à agir : établissement, 3018 si nécessaire, ou relais compétents.",
+              score:3,
+              good:true,
+              feedback:"C’est le bon cadre. Vous distinguez la conservation des preuves de leur diffusion. Une preuve peut être très utile sans devenir un document partagé entre adultes excédés."
+            },
+            {
+              label:"Montrer à tous pour faire réagir vite",
+              text:"Je poste les captures dans le groupe avec les noms visibles, persuadé qu’une exposition collective forcera enfin les autres familles à agir.",
+              score:0,
+              good:false,
+              feedback:"Cette diffusion crée une scène supplémentaire et peut aggraver la situation pour votre enfant comme pour les autres. Le numérique punit rarement bien quand il devient tribunal parental."
+            },
+            {
+              label:"Ne rien garder pour respecter l’intimité",
+              text:"Je préfère ne sauvegarder aucune preuve afin de ne pas trahir la confiance de mon enfant et de rester dans la pure parole.",
+              score:1,
+              good:false,
+              feedback:"Le souci de respect est légitime, mais il ne faut pas confondre discrétion et effacement. Quelques preuves bien conservées aident à protéger sans envahir."
+            }
+          ]
+        },
+        {
+          context:"Votre adolescent vous supplie de tout supprimer tout de suite parce qu’il ne supporte plus de voir les messages. Vous sentez son dégoût et son urgence.",
+          question:"Quelle réponse combine protection et respect ?",
+          options:[
+            {
+              label:"Sauvegarder l’essentiel avant d’alléger l’exposition",
+              text:"Je lui explique que nous allons garder quelques éléments utiles de manière sobre et sécurisée, puis retirer le reste de son champ visuel autant que possible. Je cherche à réduire la souffrance sans perdre les appuis nécessaires.",
+              score:3,
+              good:true,
+              feedback:"Très juste. Vous prenez soin du jeune tout en gardant ce qui pourra servir. La preuve n’a pas besoin d’occuper l’écran en permanence pour rester disponible."
+            },
+            {
+              label:"Supprimer absolument tout",
+              text:"Je décide d’effacer immédiatement toutes les traces, messages et captures, pour qu’il puisse respirer et tourner la page au plus vite.",
+              score:0,
+              good:false,
+              feedback:"L’intention de soulager est compréhensible, mais l’effacement total peut compliquer ensuite le retrait, la prise en charge et la protection. On peut alléger sans tout détruire."
+            },
+            {
+              label:"Lui imposer de tout relire avec moi",
+              text:"Je lui demande de faire défiler tous les contenus pour être certain de ne rien rater avant d’agir.",
+              score:1,
+              good:false,
+              feedback:"Le parent n’a pas besoin de tout voir d’un bloc. Faire revivre toute la scène peut augmenter fortement la charge émotionnelle et abîmer le sentiment de contrôle du jeune."
+            }
+          ]
+        },
+        {
+          context:"Sur une boucle de messagerie, un autre parent nomme un élève comme auteur principal et demande que chacun raconte ce qu’il sait. La conversation s’emballe très vite.",
+          question:"Quelle posture adulte limite les dégâts ?",
+          options:[
+            {
+              label:"Refuser le tribunal parallèle",
+              text:"Je ne surenchéris pas. Je recentre sur les circuits de traitement, rappelle qu’il faut éviter les mises en cause publiques et garde ma propre énergie pour la protection réelle de mon enfant.",
+              score:3,
+              good:true,
+              feedback:"C’est la posture la plus solide. Quand les adultes s’emballent entre eux, l’affaire se déplace souvent vers des conflits latéraux qui font perdre du temps et de la lisibilité."
+            },
+            {
+              label:"Participer pour ne pas être passif",
+              text:"Je raconte tout ce que je sais, j’ajoute mes captures et je pousse les autres parents à nommer eux aussi les jeunes concernés.",
+              score:0,
+              good:false,
+              feedback:"Même si l’on veut agir, cette exposition publique n’est pas un traitement protecteur. Elle peut aussi produire de nouvelles atteintes, de nouveaux écrans et de nouvelles rancunes."
+            },
+            {
+              label:"Quitter tout sujet numérique",
+              text:"Je coupe entièrement le téléphone à mon enfant et j’interdis toute discussion sur les groupes, en considérant que le problème vient principalement des écrans.",
+              score:1,
+              good:false,
+              feedback:"Réduire l’exposition peut aider, mais cela ne suffit pas si la situation est déjà engagée. Il faut aussi traiter ce qui s’est passé, conserver l’utile et transmettre au bon endroit."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Preuve ne veut pas dire diffusion.",
+          text:"Une capture utile n’a pas vocation à circuler partout. Elle sert un traitement, pas un emballement collectif."
+        },
+        {
+          title:"Le groupe de parents n’est pas un dispositif de protection.",
+          text:"Même animé de bonnes intentions, il tend facilement à produire accusation, confusion et surexposition."
+        },
+        {
+          title:"Alléger n’est pas effacer.",
+          text:"On peut réduire la charge émotionnelle sur l’écran tout en gardant quelques éléments essentiels pour la suite."
+        },
+        {
+          title:"Le parent protège aussi par la discrétion.",
+          text:"Choisir qui voit quoi fait partie intégrante de la protection numérique."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

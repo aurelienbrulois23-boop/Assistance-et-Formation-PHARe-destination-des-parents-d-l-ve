@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_REP02</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_REP02",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Stress",
+      kicker:"Observer et repérer · Module 6/10",
+      title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise",
+      quote:"Comprendre n’est pas excuser. C’est se donner une chance de mieux protéger.",
+      intro:[
+        "Après une première phase de repérage, beaucoup de parents restent déstabilisés par les réactions de leur adolescent. Il minimise ce qui s’est passé, explose pour un détail, ne trouve plus ses mots, s’épuise à surveiller son téléphone, ou passe brusquement d’un semblant de calme à une colère qui déborde. Vu de l’extérieur, cela peut paraître contradictoire.",
+        "Les ressources présentes dans le dossier sur l’empathie, le cerveau adolescent et les dynamiques de stress permettent de lire autrement ces bascules. À l’adolescence, la charge émotionnelle monte vite, la honte s’infiltre facilement, et la capacité à freiner ou à mettre des mots arrive parfois après coup. Le corps et le comportement racontent alors quelque chose que le récit n’arrive pas encore à formuler.",
+        "Le rôle du parent n’est pas de psychologiser à outrance. Il consiste plutôt à prêter des freins quand le jeune en manque, à distinguer la personne de la décharge émotionnelle, et à traiter certains signes comme des informations de protection plutôt que comme de la mauvaise volonté."
+      ],
+      insight:"Quand un adolescent dit « c’est rien » mais change de corps, de ton, de sommeil ou de rythme, le corps mérite souvent d’être cru avant le récit.",
+      xp:100,
+      earns:["Lecture du stress", "Régulation", "Nuance"],
+      seal:"◌",
+      completionText:"Vous avez consolidé un repère essentiel : lire les réactions adolescentes comme des signaux à réguler, pas seulement comme des attitudes à corriger.",
+      theme:{
+        accent:"#c48ef2",
+        accentDark:"#9158d1",
+        gold:"#efc37d",
+        bg:"#101326",
+        bg2:"#1a1f38",
+        watermark:"rgba(196,142,242,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Votre fils rentre du collège, jette son sac, claque la porte de sa chambre et répond : « Lâche-moi, c’est bon. » Une heure plus tard, il semble épuisé, mais refuse toujours d’expliquer.",
+          question:"Quelle lecture parentale aide à protéger sans sur-réagir ?",
+          options:[
+            {
+              label:"Lire une surcharge avant de chercher l’aveu",
+              text:"Je prends d’abord son état comme une information de surcharge. Je baisse mon propre niveau d’intensité, je lui dis que je vois que c’est trop maintenant, et je propose de reprendre plus tard plutôt que d’exiger une explication immédiate.",
+              score:3,
+              good:true,
+              feedback:"C’est la posture la plus protectrice. Vous ne laissez pas tomber la situation, mais vous ne confondez pas non plus l’accès à la parole avec une obligation de raconter à chaud. La co-régulation précède souvent la mise en mots."
+            },
+            {
+              label:"Recadrer sèchement l’attitude avant tout",
+              text:"Je lui rappelle immédiatement qu’on ne parle pas comme ça à un parent et je maintiens la discussion jusqu’à ce qu’il s’explique.",
+              score:1,
+              good:false,
+              feedback:"Le cadre compte, mais à ce niveau de charge émotionnelle il passe mal si l’on exige en même temps un récit fin. Vous risquez surtout d’ajouter une deuxième scène de tension à la première."
+            },
+            {
+              label:"Conclure qu’il dramatise",
+              text:"Je me dis que s’il réagit comme ça, c’est surtout un problème de caractère ou de fatigue, et j’attends que cela passe tout seul.",
+              score:0,
+              good:false,
+              feedback:"La fatigue peut jouer, mais la réaction mérite d’être lue comme un signal. La banalisation prive le parent d’informations utiles sur l’état de stress réel du jeune."
+            }
+          ]
+        },
+        {
+          context:"Votre fille lit et relit des messages humiliants le soir. Elle dit à la fois « je m’en fiche » et « j’aurais dû répondre autrement ». Vous voyez qu’elle revit la scène en boucle.",
+          question:"Comment comprendre ce mélange de minimisation et de culpabilité ?",
+          options:[
+            {
+              label:"Comme un effet de honte et de douleur sociale",
+              text:"Je comprends qu’elle essaie de tenir debout en minimisant, tout en se retournant la faute contre elle. Je l’aide à distinguer ce qu’elle contrôle et ce qui relève des auteurs ou de la dynamique de groupe.",
+              score:3,
+              good:true,
+              feedback:"Très juste. Sous stress social, un adolescent peut minimiser pour survivre tout en s’accusant intérieurement. Le rôle parental est d’introduire de la nuance sans dénier sa part de ressenti."
+            },
+            {
+              label:"Comme la preuve qu’elle sait qu’elle a tort",
+              text:"Je prends sa phrase comme un aveu : si elle se reproche quelque chose, c’est qu’elle a probablement provoqué une partie du problème.",
+              score:0,
+              good:false,
+              feedback:"L’auto-accusation n’est pas une preuve fiable. Chez un jeune touché, elle exprime souvent la honte ou le besoin de reprendre un peu de contrôle, pas une responsabilité objective dans les violences subies."
+            },
+            {
+              label:"Comme une simple affaire d’écran",
+              text:"Je lui retire le téléphone pour plusieurs jours et je considère qu’en supprimant le support, j’ai réglé l’essentiel.",
+              score:1,
+              good:false,
+              feedback:"Réduire l’exposition peut aider, mais cela ne traite ni la culpabilité ni l’atteinte relationnelle. Le parent protecteur agit sur le support sans perdre de vue la blessure sociale."
+            }
+          ]
+        },
+        {
+          context:"Le week-end, votre adolescent paraît plus calme. Pourtant, le dimanche soir, il recommence à vérifier compulsivement le groupe de classe, dort mal et demande s’il peut rester à la maison le lendemain.",
+          question:"Quel repère est le plus utile ici ?",
+          options:[
+            {
+              label:"Voir une hypervigilance plutôt qu’un caprice",
+              text:"Je lis ce retour du stress comme une hypervigilance liée à l’anticipation scolaire. Je note le lien entre le temps, l’école, le téléphone et le sommeil, puis je prépare une reprise du sujet avec lui et, si besoin, avec l’établissement.",
+              score:3,
+              good:true,
+              feedback:"Exactement. Le rythme du stress donne des informations précieuses. Le dimanche soir, la veille d’EPS, les intercours ou les notifications peuvent devenir des déclencheurs très parlants."
+            },
+            {
+              label:"Durcir pour éviter l’évitement",
+              text:"Je refuse d’entendre la demande et je réponds qu’il doit arrêter de se monter la tête, sinon il ne s’en sortira jamais.",
+              score:0,
+              good:false,
+              feedback:"Le parent a besoin de tenir le cap scolaire, mais cela ne passe pas par le déni de la peur. Quand le stress est réel, le durcissement seul augmente souvent la charge au lieu de la faire baisser."
+            },
+            {
+              label:"Attendre qu’il se décide seul",
+              text:"Comme il semble aller mieux certains moments, je préfère ne plus relancer et voir s’il reparle de lui-même avant d’agir.",
+              score:1,
+              good:false,
+              feedback:"L’accalmie partielle ne suffit pas à clore l’affaire. Les variations de stress, justement, sont souvent un indice de situation encore active ou non digérée."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Comprendre sans excuser.",
+          text:"Une explosion, une minimisation ou un mutisme peuvent être des effets du stress et de la honte. Cela n’en fait pas des attitudes à laisser faire, mais cela change la manière d’y répondre."
+        },
+        {
+          title:"Le corps est un indicateur sérieux.",
+          text:"Sommeil, ventre, évitement, contrôle compulsif du téléphone, fatigue du dimanche soir : ces éléments aident à lire ce qui reste difficilement dicible."
+        },
+        {
+          title:"Le parent prête des freins.",
+          text:"Baisser son ton, différer un échange trop chaud et remettre de la nuance aident souvent davantage qu’un débriefing imposé à chaud."
+        },
+        {
+          title:"Le stress a un rythme.",
+          text:"Repérer quand il monte permet de mieux protéger : certains lieux, jours, matières, groupes ou notifications pèsent plus que d’autres."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

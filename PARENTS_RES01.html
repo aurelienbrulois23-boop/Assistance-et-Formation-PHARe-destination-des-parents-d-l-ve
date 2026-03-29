@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_RES01</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_RES01",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Soutien",
+      kicker:"Soutenir et reconstruire · Module 5/10",
+      title:"Soutenir son enfant dans la durée",
+      quote:"La sortie de crise ne se mesure pas seulement à l'arrêt des attaques. Elle se mesure aussi au retour progressif de la sécurité, du souffle et de l'estime de soi.",
+      intro:[
+        "Quand une situation de harcèlement commence à être prise en charge, beaucoup de parents espèrent naturellement un retour rapide à la normale. Or la normalité ne revient pas d'un bloc. Un enfant peut être protégé sur le papier et rester pourtant très fatigué, honteux, en retrait ou hypervigilant.",
+        "Le travail familial entre alors dans une seconde phase : remettre du prévisible, rouvrir des espaces où l'enfant ne se sent pas uniquement défini par ce qui lui est arrivé, et l'aider à se projeter à nouveau dans l'école, dans le groupe et dans son quotidien.",
+        "Ce dernier module n'est pas un épilogue doux. C'est une partie centrale de la protection. On y apprend à soutenir sans enfermer, à réparer sans surveiller en permanence, et à reconnaître quand d'autres relais deviennent nécessaires."
+      ],
+      insight:"Un enfant qui recommence à rire n'est pas forcément pleinement rétabli. La reconstruction tient souvent dans des détails répétés : sommeil, repas, trajet, corps, confiance, liens.",
+      xp:100,
+      earns:["Réparation", "Routines", "Projection"],
+      seal:"△",
+      completionText:"Vous avez bouclé le premier parcours parents : observer, dialoguer, agir, coopérer et soutenir dans la durée.",
+      theme:{
+        accent:"#7fb8a8",
+        accentDark:"#4e8f80",
+        gold:"#f3d497",
+        bg:"#0b1714",
+        bg2:"#17302a",
+        watermark:"rgba(127,184,168,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Les attaques semblent avoir baissé, mais votre enfant continue de dire qu'il est nul, qu'il n'a plus envie de voir personne et qu'il ne se sent bien nulle part. À la maison, tout le monde voudrait tourner la page au plus vite.",
+          question:"Quelle posture aide à réparer plutôt qu'à seulement fermer le dossier ?",
+          options:[
+            {
+              label:"Reconnaître la blessure et refaire du quotidien solide",
+              text:"Je ne discute pas sa souffrance. Je réinstalle des routines simples, je cherche des espaces où il peut exister autrement que comme victime, et je reste attentif à ce qui l'aide vraiment à se sentir en sécurité.",
+              score:3,
+              good:true,
+              feedback:"C'est la bonne logique. La reconstruction passe souvent par des gestes modestes mais répétés : sommeil, repas, trajets prévisibles, activités soutenantes, adultes fiables, et identités positives hors de la crise."
+            },
+            {
+              label:"Exiger qu'il passe à autre chose",
+              text:"Je lui explique que maintenant que la situation est connue, il faut arrêter d'y penser pour ne pas s'enfermer dedans.",
+              score:0,
+              good:false,
+              feedback:"Vouloir relancer l'avenir est compréhensible, mais demander un oubli rapide risque de faire sentir à l'enfant que sa lenteur à se remettre est un problème en soi."
+            },
+            {
+              label:"Surveiller en continu tous ses faits et gestes",
+              text:"Je multiplie les contrôles, je veux tout savoir, tout vérifier et ne plus le laisser seul une minute.",
+              score:1,
+              good:false,
+              feedback:"La vigilance parentale peut soulager un temps, mais une surveillance totale finit souvent par confirmer à l'enfant que le monde reste entièrement dangereux. L'enjeu est de remettre de la sécurité, pas d'organiser une veille sans fin."
+            }
+          ]
+        },
+        {
+          context:"Toute la famille a été éprouvée. Un frère ou une sœur commence à dire qu'on ne parle plus que du problème, et votre enfant victime supporte mal d'être au centre de toutes les conversations.",
+          question:"Comment soutenir sans faire du harcèlement l'unique sujet familial ?",
+          options:[
+            {
+              label:"Redonner une place au reste de la vie familiale",
+              text:"Je garde des temps où l'on parle d'autre chose, je protège les fratries d'une saturation permanente, et je veille à ce que l'enfant concerné ne soit pas réduit à sa seule souffrance.",
+              score:3,
+              good:true,
+              feedback:"Oui. Une famille protectrice ne nie pas le problème, mais elle n'en fait pas non plus l'unique identité du foyer. Cela aide chacun à retrouver des appuis respirables."
+            },
+            {
+              label:"Faire du débriefing collectif tous les soirs",
+              text:"J'oblige tout le monde à reparler chaque jour de l'affaire à table pour ne rien perdre.",
+              score:0,
+              good:false,
+              feedback:"Le suivi est important, mais transformer le repas en tribunal permanent épuise tout le monde. Il vaut mieux choisir des temps et des formes qui ne colonisent pas toute la vie familiale."
+            },
+            {
+              label:"Ne plus jamais en parler pour tourner la page",
+              text:"J'interdis le sujet à la maison afin que chacun passe enfin à autre chose.",
+              score:0,
+              good:false,
+              feedback:"Le silence complet n'est pas plus protecteur que la saturation. La famille a besoin d'un juste milieu : des temps pour parler, des temps pour vivre autre chose."
+            }
+          ]
+        },
+        {
+          context:"Le retour au collège se profile. Votre enfant dit qu'il veut y aller pour en finir, mais son corps montre l'inverse : maux de ventre, crise de larmes la veille, peur des intercours et du trajet du matin.",
+          question:"Quel accompagnement favorise une reprise plus sûre ?",
+          options:[
+            {
+              label:"Préparer une reprise balisée",
+              text:"Je travaille avec lui et avec l'établissement un point d'appui concret : adulte ressource, modalités du trajet, lieu de repli possible, et reprise progressive si besoin.",
+              score:3,
+              good:true,
+              feedback:"C'est le bon niveau de précision. Le retour à l'école n'est pas seulement une question de courage. C'est une question d'organisation, de sécurité et de prévisible."
+            },
+            {
+              label:"Le remettre d'un coup dans le bain",
+              text:"Je l'envoie comme d'habitude en lui disant que plus on attend, plus ce sera difficile.",
+              score:0,
+              good:false,
+              feedback:"L'idée d'éviter l'attente est compréhensible, mais un retour non préparé peut confirmer la peur si l'enfant se retrouve sans appui concret au moment le plus délicat."
+            },
+            {
+              label:"Sortir durablement de toute scolarité sans concertation",
+              text:"Je décide seul qu'il ne remettra plus jamais les pieds dans l'établissement et j'arrête tout sans plan global.",
+              score:1,
+              good:false,
+              feedback:"Dans certaines situations, des aménagements forts peuvent être nécessaires. Mais une décision radicale prise seule, sans plan ni relais, peut fragiliser encore davantage la suite."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"La fin des attaques n'est pas la fin des effets.",
+          text:"Fatigue, honte, hypervigilance et perte de confiance peuvent durer. Les adultes gagnent à les reconnaître sans faire paniquer le foyer."
+        },
+        {
+          title:"La réparation passe par le quotidien.",
+          text:"Sommeil, repas, trajets, rythme, activités soutenantes et adultes fiables reconstruisent souvent plus qu'un grand discours."
+        },
+        {
+          title:"L'enfant ne doit pas devenir le centre unique du problème.",
+          text:"Une famille protectrice lui redonne une place d'enfant entier, avec des goûts, des projets, des liens et des temps où il n'est pas résumé à ce qu'il a subi."
+        },
+        {
+          title:"Le retour se prépare.",
+          text:"Quand l'école redevient possible, une reprise balisée avec l'établissement est souvent bien plus solide qu'un simple retour à la normale décrétée."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

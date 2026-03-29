@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_REP01</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_REP01",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Observer",
+      kicker:"Observer et repérer · Module 1/10",
+      title:"Repérer les signaux faibles sans dramatiser",
+      quote:"Le parent n'a pas besoin d'être certain pour commencer à protéger. Il a besoin de faits, de calme et d'un fil d'action.",
+      intro:[
+        "Dans beaucoup de familles, le harcèlement n'apparaît pas d'abord sous la forme d'une grande révélation. Il s'annonce plutôt par une constellation de petits déplacements : un enfant qui traîne pour partir, qui dit qu'il a mal au ventre le dimanche soir, qui se crispe à la vue du téléphone, qui change brusquement ses habitudes ou qui s'isole alors qu'il était jusque-là assez ouvert.",
+        "L'enjeu n'est pas d'interpréter trop vite ni de minimiser. Le parent protecteur apprend à distinguer une alerte ponctuelle d'une répétition significative. Il note ce qui change, ce qui dure et ce qui fait système. Cette discipline toute simple aide ensuite l'enfant, l'établissement et les professionnels à agir sur quelque chose de clair.",
+        "Ce premier module vous installe dans cette posture : observer sans enquêter, nommer les faits sans romancer, et préparer un premier relais adulte utile."
+      ],
+      insight:"Une impression peut être discutable. Une chronologie courte mais factuelle donne déjà une base solide pour protéger un enfant.",
+      xp:90,
+      earns:["Observation", "Chronologie", "Lucidité"],
+      seal:"◌",
+      completionText:"Vous avez posé la base du parcours : transformer une inquiétude parentale en observations utiles et transmissibles.",
+      theme:{
+        accent:"#c48ef2",
+        accentDark:"#9158d1",
+        gold:"#efc37d",
+        bg:"#0d1220",
+        bg2:"#171a2e",
+        watermark:"rgba(196,142,242,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Depuis deux semaines, votre fille de 5e dit presque chaque matin qu'elle veut rester à la maison. Elle passe ses soirées à regarder son téléphone sans plaisir, mange moins et demande soudain à changer de place dans la voiture quand vous passez devant le collège.",
+          question:"Quel premier réflexe protège sans partir trop vite dans les suppositions ?",
+          options:[
+            {
+              label:"Noter les faits et ouvrir une porte de parole",
+              text:"Je note ce qui se répète : dates, douleurs, refus, changements de comportement, place du téléphone. Je lui dis calmement que j'ai remarqué plusieurs choses et que je suis disponible, sans exiger qu'elle raconte tout d'un coup.",
+              score:3,
+              good:true,
+              feedback:"C'est la bonne entrée. Vous ne dramatisez pas, vous ne niez pas, et vous transformez l'impression parentale en observations qui pourront servir ensuite. Cette posture sécurise davantage qu'un interrogatoire immédiat."
+            },
+            {
+              label:"Rassurer sans creuser",
+              text:"Je lui dis que cela va passer, que tous les collégiens ont des phases compliquées et qu'il vaut mieux ne pas trop y penser.",
+              score:0,
+              good:false,
+              feedback:"Cette réponse part d'un bon sentiment, mais elle risque de faire entendre à l'enfant que ses signaux sont exagérés. Quand plusieurs indices se cumulent, la banalisation retarde la protection."
+            },
+            {
+              label:"Chercher tout de suite un coupable",
+              text:"J'écris immédiatement sur le groupe de parents pour demander qui s'en prend à ma fille et je cite les noms qui me viennent à l'esprit.",
+              score:0,
+              good:false,
+              feedback:"L'accusation précoce brouille vite la situation. Elle disperse les preuves, rigidifie les adultes et peut exposer davantage l'enfant. Avant toute confrontation, il faut d'abord stabiliser les faits."
+            }
+          ]
+        },
+        {
+          context:"Votre fils vous montre un message humiliant reçu sur son téléphone puis retire l'écran aussitôt. Il dit : Laisse, c'est rien. Pourtant, vous remarquez qu'il n'ose plus publier quoi que ce soit et qu'il évite la conversation de classe.",
+          question:"Comment lire ce type de retrait ?",
+          options:[
+            {
+              label:"Comme un signal à documenter",
+              text:"Je prends au sérieux l'écart entre ses mots et son comportement. Je retiens que l'évitement du groupe et du téléphone peut être une information aussi importante que le message lui-même.",
+              score:3,
+              good:true,
+              feedback:"Exactement. Les parents voient souvent mieux que personne les effets diffus : perte d'élan, hypervigilance numérique, retrait social. Ces indices sont utiles même si l'enfant minimise."
+            },
+            {
+              label:"Comme la preuve qu'il ne veut pas d'aide",
+              text:"Puisqu'il ne souhaite pas en reparler, j'en conclus qu'il faut respecter son silence et attendre qu'il revienne de lui-même.",
+              score:1,
+              good:false,
+              feedback:"Respecter le rythme de parole est juste, mais confondre silence et absence de problème est risqué. Un enfant peut se taire parce qu'il a honte, peur d'aggraver ou peur de vous inquiéter."
+            },
+            {
+              label:"Comme un simple problème de téléphone",
+              text:"Je me dis que le souci principal est l'écran. Je supprime les applis les unes après les autres et je considère le problème réglé.",
+              score:0,
+              good:false,
+              feedback:"Le support numérique compte, mais il ne remplace pas l'analyse de la situation. Supprimer une application n'efface ni l'atteinte relationnelle ni ce qui peut se poursuivre ailleurs."
+            }
+          ]
+        },
+        {
+          context:"Un autre adulte de la famille vous dit : Tu t'inquiètes trop. S'il y avait vraiment quelque chose, l'établissement t'aurait déjà appelé. Votre enfant, lui, continue de se plaindre de maux de ventre les jours d'EPS et de demander à rester dans sa chambre.",
+          question:"Quelle posture parentale est la plus protectrice ?",
+          options:[
+            {
+              label:"Tenir le cap sur les répétitions observables",
+              text:"Je reconnais qu'il n'y a peut-être pas encore toutes les pièces, mais je maintiens mon attention sur ce qui se répète. Je poursuis mes notes et je me prépare à partager des faits si cela continue.",
+              score:3,
+              good:true,
+              feedback:"C'est la bonne logique. Le doute n'empêche pas l'observation. Tenir un fil factuel permet d'agir de façon plus juste si la situation se confirme."
+            },
+            {
+              label:"Abandonner l'idée pour éviter de paraître anxieux",
+              text:"Je préfère me convaincre que c'est une mauvaise passe pour ne pas me tromper.",
+              score:0,
+              good:false,
+              feedback:"Le risque ici est classique : attendre la certitude. En matière de protection, on agit rarement à partir d'une preuve totale. On commence souvent par une accumulation d'indices modestes."
+            },
+            {
+              label:"Surveiller caché et contrôler tout",
+              text:"Je lis ses messages en cachette chaque nuit et j'espionne tous ses comptes jusqu'à trouver quelque chose.",
+              score:1,
+              good:false,
+              feedback:"La tentation est compréhensible, mais une surveillance totale peut casser la confiance et vous faire basculer dans une posture d'enquêteur. Le parent protecteur cherche une coopération, pas une intrusion permanente."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Accumulation plutôt qu'indice unique.",
+          text:"Un seul symptôme ne suffit pas toujours. En revanche, plusieurs petits déplacements qui durent forment déjà un motif d'attention."
+        },
+        {
+          title:"Du fait avant l'interprétation.",
+          text:"Dormir moins, éviter une conversation, demander à changer de trajet ou se crisper au téléphone sont des faits observables. Ils valent mieux qu'une théorie rapide."
+        },
+        {
+          title:"Le parent n'a pas à prouver.",
+          text:"Son rôle initial est d'observer, documenter, ouvrir la parole et amorcer un relais adulte quand c'est nécessaire."
+        },
+        {
+          title:"Le silence n'est pas toujours rassurant.",
+          text:"Un enfant qui minimise peut chercher à se protéger, à vous protéger ou à éviter une escalade. Cela mérite encore plus de finesse, pas moins d'attention."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

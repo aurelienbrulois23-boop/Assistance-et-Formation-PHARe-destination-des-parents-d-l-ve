@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_NUM01</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_NUM01",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Numérique",
+      kicker:"Protéger en ligne · Module 3/10",
+      title:"Cyberharcèlement : preuves, signalement, 3018",
+      quote:"Sur le numérique, l'urgence n'est pas de tout effacer. L'urgence est d'abord de protéger, conserver et orienter.",
+      intro:[
+        "Le cyberharcèlement fatigue les familles parce qu'il donne le sentiment que tout peut circuler partout, tout le temps. Pourtant, une part importante de l'aide consiste à remettre de l'ordre dans la situation : que s'est-il passé, sur quelle plateforme, avec quel compte, quelle diffusion, quel impact, et quelles preuves restent disponibles ?",
+        "Les parents ont souvent deux réflexes contradictoires : tout supprimer immédiatement, ou bien entrer dans une confrontation directe avec les autres jeunes. Dans les deux cas, ils risquent de perdre des éléments utiles ou d'amplifier le conflit.",
+        "Le but ici est d'installer une méthode simple : sécuriser l'enfant, conserver les traces utiles, utiliser les outils de signalement et mobiliser le 3018 lorsque la situation le justifie."
+      ],
+      insight:"Captures d'écran, URL, pseudo, date, heure, nom de plateforme : ces détails modestes changent souvent la qualité de la prise en charge.",
+      xp:95,
+      earns:["Preuves utiles", "Signalement", "Protection numérique"],
+      seal:"⬡",
+      completionText:"Vous avez travaillé les bons réflexes numériques : garder des traces, réduire l'exposition et mobiliser le bon niveau d'aide.",
+      theme:{
+        accent:"#59c0c9",
+        accentDark:"#2f8792",
+        gold:"#f3cf87",
+        bg:"#09191f",
+        bg2:"#12303a",
+        watermark:"rgba(89,192,201,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Votre enfant vous montre un faux compte qui republie des moqueries et des photomontages humiliants. Il veut tout supprimer tout de suite parce qu'il ne supporte plus de voir cela.",
+          question:"Quel ordre d'action est le plus protecteur ?",
+          options:[
+            {
+              label:"Sauvegarder avant de supprimer",
+              text:"Je fais avec lui des captures lisibles, je note le pseudo, la plateforme, l'URL si possible, la date et l'heure. Ensuite seulement, nous signalons le contenu et nous bloquons pour réduire l'exposition.",
+              score:3,
+              good:true,
+              feedback:"C'est la bonne séquence. Vous réduisez l'exposition, mais vous gardez aussi les éléments qui permettront ensuite de signaler, faire retirer, expliquer à l'établissement ou demander de l'aide."
+            },
+            {
+              label:"Effacer sans garder de trace",
+              text:"Je supprime tout immédiatement pour le soulager, même si nous ne conservons aucune preuve.",
+              score:0,
+              good:false,
+              feedback:"Soulager vite peut sembler prioritaire, mais tout effacer trop tôt peut priver l'enfant et les adultes d'éléments décisifs. On peut aller vite sans perdre les traces essentielles."
+            },
+            {
+              label:"Répondre publiquement pour faire cesser",
+              text:"Je poste sous le compte en menaçant d'une plainte afin de faire peur à l'auteur et de stopper net la diffusion.",
+              score:0,
+              good:false,
+              feedback:"La confrontation publique donne souvent plus de visibilité au contenu et réalimente la dynamique. Le parent protecteur cherche d'abord à sortir du spectacle."
+            }
+          ]
+        },
+        {
+          context:"Une image intime truquée ou détournée circule entre plusieurs élèves. Votre enfant est effondré et vous dit qu'il a peur que tout le collège la voie avant le lendemain matin.",
+          question:"Quel soutien numérique et institutionnel doit passer en premier plan ?",
+          options:[
+            {
+              label:"Activer sans tarder les relais adaptés",
+              text:"Je garde les preuves utiles, j'aide à signaler le contenu sur la plateforme, et j'active rapidement le 3018 pour être aidé sur le retrait, l'accompagnement et les suites utiles avec l'établissement.",
+              score:3,
+              good:true,
+              feedback:"Oui. Dans une situation de diffusion humiliante ou sexualisée, il faut aller vers des relais capables de traiter à la fois le retrait, la protection et l'accompagnement. Le 3018 fait partie de ces appuis."
+            },
+            {
+              label:"Attendre le lendemain pour voir si cela tombe tout seul",
+              text:"Je me dis que plus personne n'en parlera demain et je ne fais rien dans l'immédiat.",
+              score:0,
+              good:false,
+              feedback:"Sur le numérique, attendre peut signifier laisser le contenu circuler plus loin et plus vite. L'impression que cela va retomber seule est souvent trompeuse."
+            },
+            {
+              label:"Confisquer tous les écrans de la maison",
+              text:"Je retire tous les téléphones et je coupe le wifi pour stopper la situation.",
+              score:1,
+              good:false,
+              feedback:"Une pause numérique ponctuelle peut parfois aider à souffler, mais elle ne remplace pas le traitement de la diffusion. Le risque est de laisser l'enfant sans information et sans soutien pendant que le contenu continue ailleurs."
+            }
+          ]
+        },
+        {
+          context:"Le harcèlement passe surtout par une conversation de jeu en ligne et par des pseudos que vous ne connaissez pas. Votre enfant vous dit qu'il n'ose plus se connecter alors que c'était son principal lieu de détente.",
+          question:"Quelle démarche est la plus ajustée ?",
+          options:[
+            {
+              label:"Documenter l'écosystème précis",
+              text:"Je demande calmement quels pseudos sont impliqués, sur quel serveur ou quelle conversation cela se passe, si des captures peuvent être faites et quels outils de signalement existent sur cette plateforme.",
+              score:3,
+              good:true,
+              feedback:"C'est une posture très utile. Sur le numérique, la précision technique est souvent ce qui redonne de la prise. Nommer la plateforme, les comptes et le mode de diffusion permet d'agir concrètement."
+            },
+            {
+              label:"Disqualifier ce monde parce qu'il est virtuel",
+              text:"Je lui explique que ce n'est pas réel puisque cela se passe en ligne, et qu'il doit juste se détacher de ces gens.",
+              score:0,
+              good:false,
+              feedback:"Le virtuel a des effets bien réels : honte, isolement, peur de se reconnecter, perte de groupe. Minimiser le support numérique revient à minimiser ce qu'il fait vivre."
+            },
+            {
+              label:"Aller vous-même dans la conversation pour recadrer",
+              text:"Je me connecte avec mon propre compte afin de confronter les autres jeunes directement dans le canal de discussion.",
+              score:0,
+              good:false,
+              feedback:"Entrer dans la scène depuis votre compte risque surtout de changer la forme du conflit sans le traiter. Mieux vaut documenter, signaler et activer les relais compétents."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Toujours conserver l'essentiel avant le nettoyage.",
+          text:"Le bon geste n'est pas de tout garder indéfiniment, mais de garder ce qui sera utile pour signaler et protéger."
+        },
+        {
+          title:"Sortir du théâtre numérique.",
+          text:"Répondre en public ou entrer dans la conversation nourrit souvent la visibilité du problème. Les parents gagnent à privilégier les coulisses utiles."
+        },
+        {
+          title:"Le 3018 sert de relais spécialisé.",
+          text:"Quand la situation relève du harcèlement ou d'une violence numérique, c'est un appui concret pour l'orientation, le signalement et la suppression de contenus."
+        },
+        {
+          title:"Le support compte autant que l'impact.",
+          text:"Nommer la plateforme, le type de compte et le mode de diffusion permet d'agir beaucoup plus efficacement avec l'établissement ou les services d'aide."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

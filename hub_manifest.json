@@ -1,0 +1,62 @@
+[
+  {
+    "file": "PARENTS_REP01.html",
+    "title": "Module 1 - Repérer les signaux faibles sans dramatiser",
+    "pillar": "Observer et repérer",
+    "tags": ["parents", "signaux faibles", "observation", "harcèlement"]
+  },
+  {
+    "file": "PARENTS_DIA01.html",
+    "title": "Module 2 - Parler sans fermer la parole",
+    "pillar": "Parler et réguler",
+    "tags": ["parents", "dialogue", "écoute", "cadre adulte"]
+  },
+  {
+    "file": "PARENTS_NUM01.html",
+    "title": "Module 3 - Cyberharcèlement : preuves, signalement, 3018",
+    "pillar": "Protéger en ligne",
+    "tags": ["parents", "cyberharcèlement", "3018", "preuves"]
+  },
+  {
+    "file": "PARENTS_ACT01.html",
+    "title": "Module 4 - Coopérer avec l’établissement sans perdre le fil",
+    "pillar": "Coopérer et relayer",
+    "tags": ["parents", "établissement", "CPE", "protection"]
+  },
+  {
+    "file": "PARENTS_RES01.html",
+    "title": "Module 5 - Soutenir son enfant dans la durée",
+    "pillar": "Soutenir et reconstruire",
+    "tags": ["parents", "réparation", "routines", "retour à l’école"]
+  },
+  {
+    "file": "PARENTS_REP02.html",
+    "title": "Module 6 - Comprendre le cerveau ado quand il se ferme, explose ou minimise",
+    "pillar": "Observer et repérer",
+    "tags": ["parents", "adolescence", "stress", "honte", "régulation"]
+  },
+  {
+    "file": "PARENTS_DIA02.html",
+    "title": "Module 7 - Rouvrir la parole : émotions, honte et co-régulation",
+    "pillar": "Parler et réguler",
+    "tags": ["parents", "émotions", "honte", "parole", "co-régulation"]
+  },
+  {
+    "file": "PARENTS_NUM02.html",
+    "title": "Module 8 - Numérique côté adultes : protéger sans surexposer",
+    "pillar": "Protéger en ligne",
+    "tags": ["parents", "preuves", "groupes WhatsApp", "surexposition", "3018"]
+  },
+  {
+    "file": "PARENTS_ACT02.html",
+    "title": "Module 9 - Autour de l’enfant : quels relais activer, à quel moment ?",
+    "pillar": "Coopérer et relayer",
+    "tags": ["parents", "CPE", "PsyEN", "MDA", "CMP", "119"]
+  },
+  {
+    "file": "PARENTS_RES02.html",
+    "title": "Module 10 - Après la crise : remettre l’orientation et l’avenir en mouvement",
+    "pillar": "Soutenir et reconstruire",
+    "tags": ["parents", "orientation", "PsyEN", "mini-stages", "internat", "projection"]
+  }
+]

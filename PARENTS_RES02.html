@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_RES02</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_RES02",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Avenir",
+      kicker:"Soutenir et reconstruire · Module 10/10",
+      title:"Après la crise : remettre l’orientation et l’avenir en mouvement",
+      quote:"Relancer un avenir, ce n’est pas demander trop tôt « tu veux faire quoi plus tard ? ». C’est rendre un demain à nouveau pensable.",
+      intro:[
+        "Le harcèlement n’abîme pas seulement l’humeur et la confiance. Il réduit souvent l’horizon. Certains jeunes n’arrivent plus à parler d’études, de stages, de lycée, d’alternance ou même du simple lendemain. Toute projection se confond alors avec une menace, un lieu à éviter ou un monde dont ils se sentent exclus.",
+        "Les ressources d’orientation présentes dans le dossier sont précieuses pour sortir de cette impasse. Elles donnent des points d’appui très concrets : secteurs d’activité, lycées, MFR, CFA, mini-stages, mobilité, internat, rythmes de formation, réalités territoriales de Haute-Saône et de Bourgogne-Franche-Comté. Pour un parent, ces repères servent moins à pousser un choix qu’à rouvrir du possible.",
+        "Ce dernier module pense donc l’orientation comme un levier de reconstruction. Reprendre goût à un lieu, à un environnement, à une filière, à un atelier ou à un trajet réaliste, c’est souvent recommencer à se sentir sujet de son parcours."
+      ],
+      insight:"Quand un jeune recommence à imaginer un lieu supportable, un stage ou un métier, il recommence souvent aussi à se ressentir vivant dans son parcours.",
+      xp:120,
+      earns:["Projection", "Orientation", "Remobilisation"],
+      seal:"△",
+      completionText:"Vous avez achevé le parcours complet : protéger, soutenir, puis rouvrir un avenir réaliste et respirable pour votre enfant.",
+      theme:{
+        accent:"#7fb8a8",
+        accentDark:"#558d7e",
+        gold:"#eed39a",
+        bg:"#0f1714",
+        bg2:"#1b2c26",
+        watermark:"rgba(127,184,168,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Votre enfant de 4e répond désormais à toute question sur l’avenir : « Je m’en fiche. Je veux juste qu’on me laisse tranquille. » Il ne supporte plus l’idée d’un projet global.",
+          question:"Quelle entrée parentale a le plus de chances de rouvrir quelque chose ?",
+          options:[
+            {
+              label:"Partir d’un prochain lieu supportable",
+              text:"Je renonce au grand projet immédiat et je repars d’une petite prise concrète : un lieu qui lui semblerait supportable, une visite, un mini-stage, une porte ouverte, un rythme ou un environnement moins menaçant.",
+              score:3,
+              good:true,
+              feedback:"C’est l’approche la plus réaliste. Après une période de harcèlement, l’avenir se rouvre souvent par une marche basse, pas par une injonction à choisir toute sa vie."
+            },
+            {
+              label:"Reporter toute discussion à la fin de l’année",
+              text:"Je décide qu’on ne parlera plus du tout d’orientation avant d’aller mieux, même si cela nous prive d’occasions utiles en cours de route.",
+              score:1,
+              good:false,
+              feedback:"Il ne faut pas forcer, mais attendre complètement peut aussi figer davantage. L’enjeu est de réintroduire du possible à petite dose, pas de remettre une pression globale."
+            },
+            {
+              label:"Insister sur l’exigence et le mérite",
+              text:"Je lui rappelle qu’il doit penser à son avenir comme tout le monde, et qu’il n’a pas le droit de se laisser détourner de sa réussite par ce qu’il a vécu.",
+              score:0,
+              good:false,
+              feedback:"Cette posture peut donner du courage à l’adulte, mais elle rate souvent le niveau réel d’épuisement du jeune. Avant le mérite, il faut souvent refaire de la sécurité et du possible."
+            }
+          ]
+        },
+        {
+          context:"Votre adolescent voudrait changer d’air complètement pour la suite : autre ville, internat possible, nouvel environnement. Une partie de la famille pense qu’il fuit ; une autre y voit une chance de repartir.",
+          question:"Quelle manière d’aborder cette idée est la plus constructive ?",
+          options:[
+            {
+              label:"Transformer l’envie de rupture en critères concrets",
+              text:"Je n’idéalise pas le changement, mais je le prends au sérieux. Avec lui, j’examine ce qui compte vraiment : sécurité, trajet, internat, fatigue, rythme, besoin d’accompagnement, image du lieu et possibilité de recommencer autrement.",
+              score:3,
+              good:true,
+              feedback:"Très bonne posture. Vous ne réduisez pas l’idée à une fuite ni à une solution miracle. Vous la travaillez comme une hypothèse à éclairer, avec ses appuis et ses contraintes."
+            },
+            {
+              label:"Refuser d’emblée tout déplacement",
+              text:"Je considère qu’accepter un changement reviendrait à laisser gagner les auteurs et qu’il faut impérativement rester dans le secteur actuel.",
+              score:0,
+              good:false,
+              feedback:"Cette logique est compréhensible, mais elle place parfois le symbole avant l’état réel du jeune. La reconstruction ne passe pas toujours par le maintien coûte que coûte dans le même décor."
+            },
+            {
+              label:"Promettre un nouveau départ total",
+              text:"Je lui assure qu’en changeant totalement d’environnement, tout sera enfin réglé et qu’il repartira à zéro.",
+              score:1,
+              good:false,
+              feedback:"Le changement de cadre peut aider, mais il ne gomme pas automatiquement la blessure, la fatigue ou les habitudes de peur. Mieux vaut un espoir concret qu’une promesse totale."
+            }
+          ]
+        },
+        {
+          context:"En 3e, votre enfant hésite entre une voie générale qui rassure socialement la famille et une voie plus concrète, avec atelier, alternance possible ou rythme différent, qui lui paraît pourtant plus respirable.",
+          question:"Quel critère doit guider l’échange ?",
+          options:[
+            {
+              label:"Chercher le lieu où il pourra à nouveau apprendre et se projeter",
+              text:"Je garde en tête que l’enjeu n’est pas d’abord le prestige mais la possibilité réelle de reprendre confiance, de tenir le rythme et de se remettre en mouvement. Je m’appuie sur les ressources locales et, si besoin, sur le PsyEN pour comparer sérieusement les options.",
+              score:3,
+              good:true,
+              feedback:"C’est exactement l’esprit d’une orientation réparatrice. Le bon choix est souvent celui qui rend à nouveau l’engagement scolaire possible, pas celui qui satisfait le plus vite l’image sociale de la famille."
+            },
+            {
+              label:"Choisir la voie la plus valorisée socialement",
+              text:"Je privilégie la filière qui fait le mieux dans l’entourage, en pensant qu’il retrouvera ensuite naturellement sa motivation.",
+              score:0,
+              good:false,
+              feedback:"Quand le jeune a traversé une crise, l’image sociale ne suffit pas à remettre du mouvement. Une voie très valorisée mais invivable peut au contraire accentuer l’échec ou le retrait."
+            },
+            {
+              label:"Le laisser choisir seul sans repères",
+              text:"Je n’interviens plus du tout pour ne pas rajouter de pression, même s’il n’a plus beaucoup d’énergie ni de vision claire.",
+              score:1,
+              good:false,
+              feedback:"Le parent ne doit pas confisquer la décision, mais il peut aider à poser des critères, à visiter, à comparer et à rouvrir du discernement."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"L’orientation peut réparer.",
+          text:"Après une crise, reparler de l’avenir ne sert pas seulement à choisir une voie ; cela peut redonner du pouvoir d’agir et de la perspective."
+        },
+        {
+          title:"On repart petit.",
+          text:"Visite, mini-stage, porte ouverte, trajet, internat, rythme : de petites prises concrètes rouvrent souvent mieux l’avenir qu’un grand discours."
+        },
+        {
+          title:"Le critère n’est pas le prestige seul.",
+          text:"Il faut regarder le lieu où le jeune pourra respirer, tenir, apprendre et recommencer à se projeter."
+        },
+        {
+          title:"Les ressources locales comptent.",
+          text:"Les repères territoriaux sur les établissements, secteurs et formats de formation donnent de la matière concrète pour des choix plus ajustés."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

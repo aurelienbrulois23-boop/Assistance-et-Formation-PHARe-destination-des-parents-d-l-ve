@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_DIA02</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_DIA02",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Parole",
+      kicker:"Parler et réguler · Module 7/10",
+      title:"Rouvrir la parole : émotions, honte et co-régulation",
+      quote:"On ne force pas une parole honteuse. On la rend respirable.",
+      intro:[
+        "Le premier module de dialogue posait la base : ne pas transformer la cuisine familiale en salle d’interrogatoire. Ici, on va plus loin. Beaucoup d’adolescents touchés savent dire qu’ils vont mal, mais peinent à dire comment. Ils répondent « je sais pas », « laisse tomber », « c’est bizarre », ou passent directement d’un malaise diffus à une explosion.",
+        "Les contenus du dossier sur les émotions, l’empathie et la granularité émotionnelle montrent combien les mots comptent. Quand le jeune ne trouve que deux ou trois étiquettes globales comme « énervé », « mal » ou « nul », il lui devient plus difficile de comprendre ce qu’il vit et de demander l’aide juste. Le parent peut alors servir de traducteur prudent, pas d’interprète autoritaire.",
+        "Ce module travaille donc la co-régulation : proposer des mots sans les imposer, reconnaître la honte sans la dramatiser, et garder un cadre adulte quand la sécurité impose de transmettre une partie des faits."
+      ],
+      insight:"Quand une émotion trouve un mot assez juste, elle cherche souvent moins à sortir en bloc par le corps, le retrait ou l’explosion.",
+      xp:100,
+      earns:["Granularité", "Co-régulation", "Cadre adulte"],
+      seal:"◍",
+      completionText:"Vous avez renforcé une compétence parentale centrale : aider un adolescent à retrouver des mots, sans lui prendre sa place ni lui promettre l’impossible.",
+      theme:{
+        accent:"#79b6ff",
+        accentDark:"#4b8fd5",
+        gold:"#f2d08b",
+        bg:"#0f1623",
+        bg2:"#18263a",
+        watermark:"rgba(121,182,255,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Votre fille répond toujours « je sais pas » dès que vous essayez de préciser ce qui se passe au collège. Elle semble perdue elle-même et finit par se taire.",
+          question:"Quel geste de langage aide le plus ?",
+          options:[
+            {
+              label:"Proposer des mots possibles sans les imposer",
+              text:"Je peux lui dire : « Est-ce que c’est plutôt de la honte, de la peur, de l’épuisement, de la colère, ou un mélange ? » Je lui laisse le droit de corriger, de choisir ou de refuser.",
+              score:3,
+              good:true,
+              feedback:"Très bonne posture. Vous élargissez son vocabulaire émotionnel sans parler à sa place. Le parent devient un appui de formulation, pas un interprète qui confisque l’expérience."
+            },
+            {
+              label:"Exiger une réponse précise tout de suite",
+              text:"Je maintiens la question jusqu’à obtenir une explication nette, car sans clarté immédiate je ne peux rien faire.",
+              score:0,
+              good:false,
+              feedback:"L’intention de protéger est là, mais la pression réduit souvent encore les capacités d’un adolescent déjà saturé. La clarté vient plus facilement quand on baisse la menace de l’échange."
+            },
+            {
+              label:"Abandonner le sujet par respect",
+              text:"Puisqu’elle ne sait pas, je n’insiste plus du tout et j’attends qu’un jour elle trouve spontanément les mots.",
+              score:1,
+              good:false,
+              feedback:"Respecter le rythme est juste, mais le parent peut quand même offrir des appuis. Attendre passivement ne suffit pas toujours quand la difficulté porte précisément sur la mise en mots."
+            }
+          ]
+        },
+        {
+          context:"En parlant du collège, votre adolescent murmure : « J’ai honte. » Puis il se ferme aussitôt, comme s’il regrettait déjà de l’avoir dit.",
+          question:"Comment accueillir cette phrase sans l’écraser ?",
+          options:[
+            {
+              label:"Reconnaître la honte et ralentir",
+              text:"Je réponds quelque chose comme : « Merci de me l’avoir dit. On n’a pas besoin de tout raconter maintenant. On peut juste rester là un moment et revenir dessus par petites prises. »",
+              score:3,
+              good:true,
+              feedback:"C’est très protecteur. Vous traitez la phrase comme une ouverture précieuse, pas comme le signal qu’il faut tout faire sortir tout de suite. Cela soutient la sécurité relationnelle."
+            },
+            {
+              label:"Relativiser pour le soulager",
+              text:"Je lui dis que c’est idiot d’avoir honte, qu’il n’a aucune raison de ressentir ça et qu’il doit se ressaisir.",
+              score:0,
+              good:false,
+              feedback:"Même avec de bonnes intentions, nier une émotion la rend souvent plus solitaire. La honte diminue moins quand on la juge que quand on lui fait de la place sans l’enfler."
+            },
+            {
+              label:"Transformer immédiatement en enquête",
+              text:"Je profite du moment pour lui demander tous les noms, toutes les dates et tous les détails de la situation avant qu’il se referme.",
+              score:1,
+              good:false,
+              feedback:"Le besoin d’information est compréhensible, mais ce moment est d’abord relationnel. Si l’on bascule trop vite dans l’enquête, on risque de refermer la porte qu’on venait juste d’entrouvrir."
+            }
+          ]
+        },
+        {
+          context:"Votre enfant vous demande : « Promets-moi que tu ne diras rien au collège. » Vous sentez pourtant que la situation mérite probablement un relais adulte.",
+          question:"Quelle réponse garde la confiance sans promettre l’impossible ?",
+          options:[
+            {
+              label:"Dire la vérité sur le cadre",
+              text:"Je peux répondre : « Je vais essayer de décider avec toi ce qu’on partage et comment, mais si ta sécurité est en jeu je ne pourrai pas garder tout pour moi. Mon rôle est aussi de te protéger. »",
+              score:3,
+              good:true,
+              feedback:"C’est l’équilibre le plus juste. Vous restez fiable parce que vous ne promettez pas un secret absolu que vous ne pourriez pas tenir, tout en montrant que vous cherchez une transmission maîtrisée."
+            },
+            {
+              label:"Promettre un silence total pour obtenir la suite",
+              text:"Je lui garantis que je ne parlerai à personne, comme ça il me raconte tout.",
+              score:0,
+              good:false,
+              feedback:"Cette promesse rassure à court terme, mais elle devient piégeante si la situation exige un adulte extérieur. Le parent risque alors de trahir sa promesse ou de retarder une protection nécessaire."
+            },
+            {
+              label:"Passer outre sans rien dire",
+              text:"Je contacte immédiatement l’établissement sans le prévenir, car sa demande ne doit pas entrer en ligne de compte.",
+              score:1,
+              good:false,
+              feedback:"Il faut parfois transmettre, mais le faire sans aucune préparation peut fragiliser la confiance. Même quand le relais est nécessaire, mieux vaut autant que possible l’expliquer et le cadrer."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Des mots proposés, pas imposés.",
+          text:"Le parent peut ouvrir un éventail émotionnel plus fin sans prétendre savoir à la place du jeune ce qu’il ressent."
+        },
+        {
+          title:"La honte demande du tact.",
+          text:"Quand elle apparaît, le meilleur réflexe est souvent de ralentir, de remercier pour la confiance et de fractionner la suite."
+        },
+        {
+          title:"Le secret absolu n’est pas tenable.",
+          text:"En situation de sécurité menacée, le parent doit pouvoir transmettre. Mieux vaut le dire clairement que promettre ce qu’on ne pourra pas respecter."
+        },
+        {
+          title:"La parole se co-régule.",
+          text:"Un adolescent parle mieux quand l’adulte tient son propre ton, réduit la pression et montre qu’il saura porter avec lui une partie du poids."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>

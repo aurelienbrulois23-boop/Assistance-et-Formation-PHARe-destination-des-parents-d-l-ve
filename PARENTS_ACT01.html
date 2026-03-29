@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIX Parents | PARENTS_ACT01</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    window.PIX_PARENTS_MODULE = {
+      id:"PARENTS_ACT01",
+      backUrl:"index.html",
+      hubId:"PIX_PARENTS",
+      hubLabel:"PIX Parents",
+      eventType:"PARENTS_PROGRESS",
+      watermark:"Coopération",
+      kicker:"Coopérer et relayer · Module 4/10",
+      title:"Coopérer avec l'établissement sans perdre le fil",
+      quote:"Une famille et un établissement agissent mieux quand ils partagent des faits, un interlocuteur et un calendrier. Le reste produit surtout du bruit.",
+      intro:[
+        "Quand un parent prend rendez-vous avec l'établissement, il vient souvent avec un mélange de peur, de colère, de fatigue et d'urgence. C'est compréhensible. Mais ce mélange ne suffit pas à faire avancer une situation. Ce qui aide l'équipe, c'est une chronologie claire, des effets observables, des preuves utiles et des demandes précises.",
+        "De son côté, la famille a besoin de sentir qu'il existe un adulte référent, des mesures de protection visibles et un suivi. Sans cela, le risque est grand de multiplier les appels, d'écrire partout, de contacter directement d'autres parents ou de partir dans une guerre parallèle qui ne protège plus vraiment l'enfant.",
+        "Ce module vous aide à transformer la colère légitime en coopération exigeante : ferme sur la protection, sobre dans la forme, et assez claire pour obtenir des suites."
+      ],
+      insight:"Dans les rendez-vous difficiles, la question clé n'est pas seulement Qui a fait quoi ? mais aussi Qui coordonne maintenant, et quand refait-on un point ?",
+      xp:95,
+      earns:["Coordination", "Demande claire", "Suivi"],
+      seal:"◆",
+      completionText:"Vous avez travaillé un levier majeur : passer d'une réaction parentale dispersée à une coopération structurée avec l'établissement.",
+      theme:{
+        accent:"#d79a4a",
+        accentDark:"#aa6b33",
+        gold:"#f4cf8d",
+        bg:"#17120d",
+        bg2:"#2a2016",
+        watermark:"rgba(215,154,74,.10)"
+      },
+      catalog:[
+        { id:"PARENTS_REP01", xp:90, title:"Repérer les signaux faibles sans dramatiser" },
+        { id:"PARENTS_DIA01", xp:90, title:"Parler sans fermer la parole" },
+        { id:"PARENTS_NUM01", xp:95, title:"Cyberharcèlement : preuves, signalement, 3018" },
+        { id:"PARENTS_ACT01", xp:95, title:"Coopérer avec l’établissement sans perdre le fil" },
+        { id:"PARENTS_RES01", xp:100, title:"Soutenir son enfant dans la durée" },
+        { id:"PARENTS_REP02", xp:100, title:"Comprendre le cerveau ado quand il se ferme, explose ou minimise" },
+        { id:"PARENTS_DIA02", xp:100, title:"Rouvrir la parole : émotions, honte et co-régulation" },
+        { id:"PARENTS_NUM02", xp:105, title:"Numérique côté adultes : protéger sans surexposer" },
+        { id:"PARENTS_ACT02", xp:110, title:"Autour de l’enfant : quels relais activer, à quel moment ?" },
+        { id:"PARENTS_RES02", xp:120, title:"Après la crise : remettre l’orientation et l’avenir en mouvement" }
+      ],
+      scenarios:[
+        {
+          context:"Vous obtenez un premier rendez-vous avec le CPE et la direction. Votre enfant a déjà manqué plusieurs cours. Vous avez des captures, une petite chronologie et des notes sur le sommeil et l'appétit.",
+          question:"Comment entrer dans cette rencontre de façon utile ?",
+          options:[
+            {
+              label:"Avec des faits, une demande et une attente de suivi",
+              text:"J'arrive avec une chronologie simple, quelques preuves claires et trois questions : qui coordonne, quelles protections immédiates sont possibles, et quand faisons-nous un point de suivi ?",
+              score:3,
+              good:true,
+              feedback:"C'est la posture la plus efficace. Vous aidez l'établissement à agir et vous vous donnez aussi des repères concrets pour ne pas sortir du rendez-vous dans le flou."
+            },
+            {
+              label:"Avec un ultimatum centré sur la sanction",
+              text:"J'exige d'entrée des exclusions sans discuter du reste, sinon je menace de tout rendre public.",
+              score:0,
+              good:false,
+              feedback:"La sanction peut faire partie des suites, mais si elle devient l'unique objet, on perd souvent de vue la protection immédiate de l'enfant, le suivi et le traitement fin de la situation."
+            },
+            {
+              label:"Avec un récit très large mais peu structuré",
+              text:"Je raconte tout ce que je ressens depuis des semaines en espérant que l'équipe comprenne globalement le problème.",
+              score:1,
+              good:false,
+              feedback:"Votre ressenti est important, mais dans un rendez-vous institutionnel il gagne à être appuyé par une chronologie et des éléments observables. Sans structure, le message peut se diluer."
+            }
+          ]
+        },
+        {
+          context:"Après la rencontre, l'établissement vous dit qu'une prise en charge est lancée, mais sans entrer dans tous les détails. Votre enfant a peur que rien ne change et vous pousse à relancer tout le monde dès le soir.",
+          question:"Quelle suite garde la coopération solide ?",
+          options:[
+            {
+              label:"Faire un récapitulatif et convenir d'un point daté",
+              text:"J'envoie un message bref qui résume les faits partagés, les mesures annoncées et la date du prochain point. Je garde ainsi une trace sobre et commune.",
+              score:3,
+              good:true,
+              feedback:"Très bonne pratique. Le récapitulatif écrit évite les malentendus, soutient la mémoire des adultes et offre à la famille un repère clair dans une période très chargée."
+            },
+            {
+              label:"Contacter directement les autres familles",
+              text:"Je décide d'appeler moi-même les parents des jeunes impliqués pour accélérer la résolution.",
+              score:0,
+              good:false,
+              feedback:"Ce passage direct entre familles paraît parfois efficace, mais il déplace souvent le conflit au mauvais endroit. Il peut fragiliser la prise en charge et exposer davantage votre enfant."
+            },
+            {
+              label:"Multiplier les relances sur tous les canaux",
+              text:"Je relance la direction, le professeur principal, le CPE et les délégués de parents plusieurs fois par jour afin de montrer l'urgence.",
+              score:1,
+              good:false,
+              feedback:"L'urgence existe, mais la dispersion des canaux fabrique souvent du bruit plus que du suivi. Un interlocuteur central et un calendrier valent mieux qu'une saturation générale."
+            }
+          ]
+        },
+        {
+          context:"Deux semaines plus tard, la situation semble un peu plus calme mais votre enfant continue de redouter les intercours et les trajets. Vous ne savez pas s'il faut patienter ou réactiver l'équipe.",
+          question:"Quelle posture permet de garder le fil sans surchauffer la relation ?",
+          options:[
+            {
+              label:"Appuyer sur les effets observables persistants",
+              text:"Je reprends contact en m'appuyant sur ce qui continue de faire souffrir mon enfant : peur des intercours, évitement, fatigue. Je demande si des ajustements de protection sont possibles.",
+              score:3,
+              good:true,
+              feedback:"C'est juste. Le suivi ne porte pas seulement sur les faits initialement rapportés, mais sur leurs effets dans le temps. Nommer les conséquences aide l'établissement à réajuster."
+            },
+            {
+              label:"Tout suspendre pour ne pas passer pour insistant",
+              text:"Je n'ose plus rien dire afin de ne pas abîmer la relation avec l'établissement.",
+              score:0,
+              good:false,
+              feedback:"La coopération ne signifie pas se taire. Si l'enfant continue de souffrir, le parent reste légitime à demander un réajustement ou un nouveau point."
+            },
+            {
+              label:"Sortir entièrement du cadre scolaire",
+              text:"Je publie un récit complet sur les réseaux en nommant le collège pour obliger tout le monde à réagir.",
+              score:0,
+              good:false,
+              feedback:"La parole publique peut être tentante quand on se sent seul, mais elle ne remplace pas un travail de protection fin et peut provoquer une nouvelle exposition pour votre enfant."
+            }
+          ]
+        }
+      ],
+      synthesis:[
+        {
+          title:"Venir avec peu, mais venir clair.",
+          text:"Une chronologie simple, quelques preuves lisibles et des effets concrets sur l'enfant suffisent déjà à faire un rendez-vous utile."
+        },
+        {
+          title:"Demander un pilote et un calendrier.",
+          text:"Le sentiment de flou diminue fortement quand la famille sait qui coordonne et quand un nouveau point est prévu."
+        },
+        {
+          title:"Éviter les circuits parallèles.",
+          text:"Contacter directement les autres familles ou saturer tous les canaux produit souvent plus de tension que de protection."
+        },
+        {
+          title:"Le suivi porte sur les effets.",
+          text:"Si la souffrance, l'évitement ou la peur persistent, il est légitime de re-solliciter l'établissement avec ces éléments."
+        }
+      ]
+    };
+  </script>
+  <script src="module_runner.js"></script>
+</body>
+</html>
